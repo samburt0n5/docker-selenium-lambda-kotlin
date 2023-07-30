@@ -1,0 +1,18 @@
+service: docker-selenium-lambda-kotlin
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'prod'}
+  region: ${env:AWS_REGION, 'eu-west-2'}
+  ecr:
+    images:
+      img:
+        path: ./
+        platform: linux/amd64
+
+functions:
+  demo:
+    timeout: 900
+    memorySize: 2048
+    image:
+      name: img
