@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 import java.net.HttpURLConnection
 
-var webDriver: WebDriver = startBrowser()
+val webDriver: WebDriver = startBrowser()
 
 fun handleRequest(request: APIGatewayV2HTTPEvent, context: Context): APIGatewayV2HTTPResponse {
     println("Hello World!")
